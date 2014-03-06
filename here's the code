@@ -1,0 +1,76 @@
+
+<script type="text/javascript">
+
+function nextImageSetup()
+{
+     var currentImage = 1;
+     nextImage = function() 
+     {
+          var oldImage = "#image" + currentImage;
+          $(oldImage).hide();
+          (currentImage >= 6) ? currentImage = 1 : currentImage +=1;
+           var newImage = "#image" + currentImage;
+           $(newImage).show();
+        }
+}     
+$(function(){
+     nextImageSetup();
+     $('.swapimage').click(function(){nextImage()});
+});
+</script>
+
+<style type="text/css">
+#wrapper {
+   height:660px;
+   width:50%;
+   margin:5px;
+   float:left;
+   position:relative;
+   background-color:#ffffff;
+}
+.swapimage { width:300px;
+position: absolute;
+top:35;
+left:0;
+font-family:Arial,Verdana,Helvetica,sans-serif;
+font-size:.75em;
+font-weight:bold;
+line-height:16px;
+}
+#image2, #image3, #image4, #image5, #image6 {
+  display:none;
+}
+</style>
+
+
+<div id="wrapper">
+<div id="buttons">
+<input type="button" onclick="nextImage();" value="Next diagram">
+</div>
+<div id="image1" class="swapimage">
+<p>This is a 74 by 42 court.</p>
+<img src="http://media.cleveland.com/pdextra/photo/-aade69f9512f84c5.png" style="width:290px">
+
+</div>
+<div id="image2" class="swapimage">
+<p>This is an 84 by 50 court.</p>
+<img src="http://media.cleveland.com/pdextra/photo/-74ddee630de64e05.png" style="width:290px">
+
+</div>
+<div id="image3" class="swapimage">
+<p>This is the 94 by 50 court.</p>
+<img src="http://media.cleveland.com/pdextra/photo/-16fd722f45454eaf.png" style="width:290px">
+</div>
+<div id="image4" class="swapimage">
+<p>Here is a 74 by 42 court surrounded by the gym walls or bleachers at Max Hayes.</p>
+<img src="http://media.cleveland.com/pdextra/photo/74x42-marg-vert1png-a03162df8dba0357.png" style="width:290px">
+</div>
+<div id="image5" class="swapimage">
+<p>This is an 84 by 50 court with the smallest and largest margins we found.</p>
+<img src="http://media.cleveland.com/pdextra/photo/-e0ebed545cdc5acd.png" style=" width:290px">
+</div>
+<div id="image6" class="swapimage">
+<p>This is an 94 by 50 court with the smallest and largest margins we found.</p>
+<img src="http://media.cleveland.com/pdextra/photo/-f63ff5962994d682.png" style="width:290px">
+</div>
+</div>
